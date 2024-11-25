@@ -1,3 +1,47 @@
+/* Base styles for all devices */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content {
+    flex: 3;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    margin: 0;
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather+Sans:wght@400;700&display=swap");
 body {
   font-family: 'Lato', sans-serif;
